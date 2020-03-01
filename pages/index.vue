@@ -103,7 +103,7 @@ export default {
         width: 100%;
         text-align: center;
         color: white;
-        font-size: 25px;
+        font-size: 35px;
 
         a {
           color: inherit;
