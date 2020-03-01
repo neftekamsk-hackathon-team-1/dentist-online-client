@@ -1,6 +1,9 @@
 # online-service-frontend
 
-> My spectacular Nuxt.js project
+## Credits
+
+Designer - Ilnaz Mingaliev <mingaliev.ilnaz@gmail.com>  
+Developer - Edgar Poghosyan <starguitar307@gmail.com>
 
 ## Build Setup
 
