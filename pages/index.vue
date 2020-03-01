@@ -41,24 +41,11 @@
       </div>
       <div>
         <Specialist
-          avatar="/specialists-photos/1.jpg"
-          full-name="asdfasdfa"
-          about="adsfadsfasdf"
-        />
-        <Specialist
-          avatar="/specialists-photos/2.jpg"
-          full-name="asdfasdfa"
-          about="adsfadsfasdf"
-        />
-        <Specialist
-          avatar="/specialists-photos/3.jpg"
-          full-name="asdfasdfa"
-          about="adsfadsfasdf"
-        />
-        <Specialist
-          avatar="/specialists-photos/4.jpg"
-          full-name="asdfasdfa"
-          about="adsfadsfasdf"
+          v-for="(specialist, i) in allSpecialists"
+          :key="i"
+          :avatar="`/specialists-photos/${specialist.id}.jpg`"
+          :full-name="specialist.full_name || ''"
+          :about="specialist.about || ''"
         />
       </div>
     </div>
@@ -78,7 +65,16 @@ export default {
     Navbar,
     Specialist,
     Contacts
-    // Specialist
+  },
+
+  computed: {
+    allSpecialists({ store }) {
+      return this.$store.state.home.allSpecialists
+    }
+  },
+
+  mounted() {
+    this.$store.dispatch('home/loadAllSpecialists')
   }
 }
 </script>
