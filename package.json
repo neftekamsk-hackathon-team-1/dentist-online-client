@@ -2,7 +2,10 @@
   "name": "online-service-frontend",
   "version": "1.0.0",
   "description": "My spectacular Nuxt.js project",
-  "author": "Edgar",
+  "author": "Edgar Poghosyan <starguitar307@gmail.com>",
+  "contributors": [
+    "Ilnaz Mingaliev <mingaliev.ilnaz@gmail.com>"
+  ],
   "private": true,
   "scripts": {
     "dev": "nuxt",
