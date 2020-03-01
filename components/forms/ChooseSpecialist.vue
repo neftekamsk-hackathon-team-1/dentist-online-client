@@ -26,7 +26,9 @@
             {{ specialist.about }}
           </div>
           <div>
-            <button class="btn btn-primary">Выбрать</button>
+            <button class="btn btn-primary" @click="$emit('input', specialist)">
+              Выбрать
+            </button>
           </div>
         </div>
       </div>
@@ -42,6 +44,7 @@ export default {
     FormLayout
   },
   props: {
+    value: { type: Object, default: null },
     specialists: { type: Array, required: true }
   }
 }
@@ -55,6 +58,7 @@ export default {
 
   &__item {
     margin: 24px 0;
+    padding: 10px;
 
     &__photo {
       width: 106px;

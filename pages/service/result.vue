@@ -9,16 +9,18 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col">
-                  <Ticket :ticket-number="111" />
+                  <Ticket :ticket-number="ticketNumber" />
                 </div>
               </div>
               <div class="row">
                 <div class="col service-result__actions">
-                  <button
-                    class="btn btn-primary service-result__actions__home-btn"
-                  >
-                    Главная
-                  </button>
+                  <nuxt-link to="/">
+                    <button
+                      class="btn btn-primary service-result__actions__home-btn"
+                    >
+                      Главная
+                    </button>
+                  </nuxt-link>
                 </div>
               </div>
             </div>
@@ -39,6 +41,11 @@ export default {
     Navbar,
     FormLayout,
     Ticket
+  },
+  computed: {
+    ticketNumber() {
+      return this.$route.query.id
+    }
   }
 }
 </script>

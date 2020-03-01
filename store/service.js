@@ -1,6 +1,7 @@
 import ApiClient from '@/services/api.service'
 
 export const state = () => ({
+  chosenSpecialist: null,
   specialists: []
 })
 
@@ -14,5 +15,8 @@ export const actions = {
 export const mutations = {
   setSpecialists(state, specialists) {
     state.specialists = specialists
+  },
+  setChosenSpecialist(state, specialist) {
+    state.chosenSpecialist = specialist
   }
 }
