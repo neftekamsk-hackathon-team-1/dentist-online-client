@@ -6,6 +6,7 @@
   "contributors": [
     "Ilnaz Mingaliev <mingaliev.ilnaz@gmail.com>"
   ],
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "dev": "nuxt",
