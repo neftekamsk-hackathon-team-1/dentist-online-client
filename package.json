@@ -1,7 +1,7 @@
 {
-  "name": "online-service-frontend",
+  "name": "dentist-online-client",
   "version": "1.0.0",
-  "description": "My spectacular Nuxt.js project",
+  "description": "Dentist Online Client",
   "author": "Edgar Poghosyan <starguitar307@gmail.com>",
   "contributors": [
     "Ilnaz Mingaliev <mingaliev.ilnaz@gmail.com>"
