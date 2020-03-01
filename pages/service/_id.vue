@@ -5,7 +5,7 @@
 
       <div class="row justify-content-center">
         <div class="col-6">
-          <ChooseSpecialistForm />
+          <ChooseSpecialistForm :specialists="specialists" />
           <PickDateForm />
           <PhoneForm />
         </div>
@@ -26,6 +26,17 @@ export default {
     ChooseSpecialistForm,
     PickDateForm,
     PhoneForm
+  },
+  computed: {
+    specialists() {
+      return this.$store.state.service.specialists || []
+    }
+  },
+  mounted() {
+    this.$store.dispatch(
+      'service/loadSpecialistsByServiceId',
+      this.$route.params.id
+    )
   }
 }
 </script>

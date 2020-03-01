@@ -6,19 +6,21 @@
   >
     <div class="container">
       <div
-        v-for="(specialist, i) in getSpecialists"
+        v-for="(specialist, i) in specialists"
         :key="i"
         class="row choose-specialist__item"
       >
         <div class="col-auto">
           <div
-            :style="{ 'background-image': `url('${specialist.avatar}')` }"
+            :style="{
+              'background-image': `url('/specialists-photos/${specialist.id}.jpg')`
+            }"
             class="choose-specialist__item__photo"
           ></div>
         </div>
         <div class="col choose-specialist__item__info">
           <div class="choose-specialist__item__info__full-name">
-            {{ specialist.fullName }}
+            {{ specialist.full_name }}
           </div>
           <div class="choose-specialist__item__info__about">
             {{ specialist.about }}
@@ -40,78 +42,7 @@ export default {
     FormLayout
   },
   props: {
-    serviceId: { type: Number, required: true }
-  },
-  computed: {
-    getSpecialists() {
-      return [
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/1.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        },
-        {
-          fullName: 'Петрова Наталья Ивановна',
-          about: 'Опыт: 10 лет',
-          avatar: '/specialists-photos/2.jpg'
-        }
-      ]
-    }
+    specialists: { type: Array, required: true }
   }
 }
 </script>
