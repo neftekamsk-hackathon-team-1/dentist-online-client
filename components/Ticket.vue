@@ -1,9 +1,7 @@
 <template>
   <div class="ticket">
     <div class="ticket__number">ТАЛОН № {{ ticketNumber }}</div>
-    <div class="ticket__hint">
-      Номер талона отправлен Вам на номер телефона
-    </div>
+    <div class="ticket__hint"></div>
   </div>
 </template>
 

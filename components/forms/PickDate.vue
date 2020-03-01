@@ -9,17 +9,18 @@
             name="service_date"
             :language="ru"
             :bootstrap-styling="true"
+            placeholder="Дата и время"
             @input="$emit('input', $event)"
           />
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col" style="text-align: center">
           <button class="btn btn-primary">
             Выбрать
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </FormLayout>
 </template>
@@ -51,7 +52,7 @@ export default {
 
 .pick-date {
   &__body {
-    background-color: #080d3d;
+    // background-color: #080d3d;
     border-radius: 30px;
     padding: 24px;
 

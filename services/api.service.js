@@ -39,6 +39,16 @@ class ApiClient {
       })
       .then((res) => res.data)
   }
+
+  getAllAppointments() {
+    return this.client.get('/appointments').then((res) => res.data)
+  }
+
+  editAppointment(appointmentId, editData) {
+    return this.client
+      .put(`/appointments/${appointmentId}`, editData)
+      .then((res) => res.data)
+  }
 }
 
 export default new ApiClient()

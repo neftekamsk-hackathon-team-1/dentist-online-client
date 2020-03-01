@@ -8,7 +8,11 @@
       <div
         v-for="(specialist, i) in specialists"
         :key="i"
-        class="row choose-specialist__item"
+        :class="[
+          'row',
+          'choose-specialist__item',
+          { chosen: value && value.id == specialist.id }
+        ]"
       >
         <div class="col-auto">
           <div
@@ -19,14 +23,24 @@
           ></div>
         </div>
         <div class="col choose-specialist__item__info">
-          <div class="choose-specialist__item__info__full-name">
+          <div
+            :class="[
+              'choose-specialist__item__info__full-name',
+              { chosen: value && value.id == specialist.id }
+            ]"
+          >
             {{ specialist.full_name }}
           </div>
-          <div class="choose-specialist__item__info__about">
+          <div
+            :class="[
+              'choose-specialist__item__info__about',
+              { chosen: value && value.id == specialist.id }
+            ]"
+          >
             {{ specialist.about }}
           </div>
           <div>
-            <button class="btn btn-primary" @click="$emit('input', specialist)">
+            <button class="button" @click="$emit('input', specialist)">
               Выбрать
             </button>
           </div>
@@ -59,6 +73,11 @@ export default {
   &__item {
     margin: 24px 0;
     padding: 10px;
+    border-radius: 30px;
+
+    &.chosen {
+      background-color: #c3c3c3;
+    }
 
     &__photo {
       width: 106px;

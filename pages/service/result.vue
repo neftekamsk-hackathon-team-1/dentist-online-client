@@ -15,9 +15,7 @@
               <div class="row">
                 <div class="col service-result__actions">
                   <nuxt-link to="/">
-                    <button
-                      class="btn btn-primary service-result__actions__home-btn"
-                    >
+                    <button class="button service-result__actions__home-btn">
                       Главная
                     </button>
                   </nuxt-link>
