@@ -15,7 +15,7 @@
       </div>
       <div class="row">
         <div class="col" style="text-align: center">
-          <button class="btn btn-primary" @click="$emit('submit')">
+          <button class="button" @click="$emit('submit')">
             Отправить
           </button>
         </div>
